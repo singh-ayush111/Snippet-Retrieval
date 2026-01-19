@@ -1,0 +1,21 @@
+body { font-family: sans-serif; background: #f4f4f9; display: flex; justify-content: center; height: 100vh; align-items: center; }
+.container { background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); width: 500px; }
+.input-group { display: flex; gap: 10px; margin-bottom: 20px; }
+input { flex: 1; padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
+button { padding: 10px 15px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; }
+button:hover { background: #0056b3; }
+pre { background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 4px; overflow-x: auto; min-height: 100px; }
+.hidden { display: none; }
+#copyBtn { margin-top: 10px; background: #28a745; width: 100%; }
+/* ... existing css ... */
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical; /* Allows user to resize height only */
+    font-family: monospace;
+    box-sizing: border-box; /* Ensures padding doesn't break width */
+}

@@ -1,0 +1,27 @@
+{
+  "name": "code_snippet",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000S\u0000n\u0000i\u0000p\u0000p\u0000e\u0000t\u0000-\u0000R\u0000e\u0000t\u0000r\u0000i\u0000e\u0000v\u0000a\u0000l\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/singh-ayush111/Snippet-Retrieval.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/singh-ayush111/Snippet-Retrieval/issues"
+  },
+  "homepage": "https://github.com/singh-ayush111/Snippet-Retrieval#readme",
+  "dependencies": {
+    "body-parser": "^2.2.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "pg": "^8.17.1"
+  }
+}

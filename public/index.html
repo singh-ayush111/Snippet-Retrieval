@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Snippet Fetcher</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Snippet Fetcher</h2>
+        
+        <div class="input-group">
+            <input type="text" id="keywordInput" placeholder="Enter keyword (e.g., express-server)">
+            <button onclick="fetchSnippet()">Get Code</button>
+        </div>
+
+        <div class="result-area">
+            <pre><code id="codeDisplay">// Code will appear here...</code></pre>
+            <button id="copyBtn" class="hidden" onclick="copyCode()">Copy to Clipboard</button>
+        </div>
+
+        <hr style="margin: 20px 0; border: 0; border-top: 1px solid #ddd;">
+
+<h3>Add New Snippet</h3>
+<div class="add-snippet-form">
+    <input type="text" id="newKeyword" placeholder="New Keyword (e.g., python-loop)">
+    <textarea id="newCode" placeholder="Paste your code snippet here..." rows="5"></textarea>
+    <button onclick="saveSnippet()" style="background-color: #28a745;">Save to Database</button>
+</div>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
