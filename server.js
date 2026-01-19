@@ -7,12 +7,10 @@ const path = require('path');
 const app = express();
 const PORT = 3000;
 
-// Middleware
 app.use(cors());
 app.use(express.json());
-app.use(express.static('public')); // Serves frontend files
+app.use(express.static('public')); 
 
-// Database Connection
 const pool = new Pool({
     user: process.env.DB_USER,
     host: process.env.DB_HOST,
@@ -21,7 +19,6 @@ const pool = new Pool({
     port: 5432,
 });
 
-// API: Get snippet by keyword
 app.get('/api/snippet/:keyword', async (req, res) => {
     try {
         const { keyword } = req.params;
@@ -41,7 +38,6 @@ app.get('/api/snippet/:keyword', async (req, res) => {
     }
 });
 
-// API: Add new snippet (Optional, for easy feeding)
 app.post('/api/snippet', async (req, res) => {
     try {
         const { keyword, code } = req.body;
@@ -59,7 +55,6 @@ app.post('/api/snippet', async (req, res) => {
     try {
         const { keyword, code } = req.body;
         
-        // Basic validation
         if (!keyword || !code) {
             return res.status(400).json({ success: false, message: 'Keyword and code are required.' });
         }
@@ -71,7 +66,6 @@ app.post('/api/snippet', async (req, res) => {
 
         res.json({ success: true, message: 'Snippet saved successfully!' });
     } catch (err) {
-        // Handle duplicate keyword error (Postgres error code 23505)
         if (err.code === '23505') {
             return res.status(409).json({ success: false, message: 'This keyword already exists!' });
         }

@@ -7,15 +7,4 @@ button:hover { background: #0056b3; }
 pre { background: #2d2d2d; color: #f8f8f2; padding: 15px; border-radius: 4px; overflow-x: auto; min-height: 100px; }
 .hidden { display: none; }
 #copyBtn { margin-top: 10px; background: #28a745; width: 100%; }
-/* ... existing css ... */
-
-textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    resize: vertical; /* Allows user to resize height only */
-    font-family: monospace;
-    box-sizing: border-box; /* Ensures padding doesn't break width */
-}
+textarea {width: 100%;padding: 10px;margin-bottom: 10px;border: 1px solid #ccc;border-radius: 4px;resize: vertical; font-family: monospace;box-sizing: border-box; }

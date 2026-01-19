@@ -28,7 +28,6 @@ function copyCode() {
     alert("Code copied!");
 }
 
-// ... existing fetchSnippet function ...
 
 async function saveSnippet() {
     const keywordInput = document.getElementById('newKeyword');
@@ -54,7 +53,6 @@ async function saveSnippet() {
 
         if (response.ok) {
             alert(data.message);
-            // Clear inputs on success
             keywordInput.value = '';
             codeInput.value = '';
         } else {
